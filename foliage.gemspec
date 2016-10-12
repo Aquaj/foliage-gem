@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = [File.join('app', 'helpers')]
   spec.required_ruby_version = '>= 2.0.0'
 
-  spec.add_dependency 'rails', ['>= 3.2', '< 5']
+  spec.add_dependency 'rails', ['>= 3.2']
   spec.add_dependency 'jquery-rails', '~> 4.0'
   spec.add_dependency 'coffee-rails', '~> 4.1'
   spec.add_dependency 'sass-rails', '~> 5.0'
