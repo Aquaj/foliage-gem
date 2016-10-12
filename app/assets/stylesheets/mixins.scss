@@ -1,0 +1,131 @@
+@import "bootstrap/mixins";
+
+@mixin calc($property, $expression) {
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: -khtml-calc(#{$expression});
+  #{$property}: -moz-calc(#{$expression});
+  #{$property}: -ms-calc(#{$expression});
+  #{$property}: -o-calc(#{$expression});
+  #{$property}: calc(#{$expression});
+}
+
+@mixin prefixed-property($property, $value) {
+  -webkit-#{$property}: $value;
+  -khtml-#{$property}: $value;
+  -moz-#{$property}: $value;
+  -ms-#{$property}: $value;
+  -o-#{$property}: $value;
+  #{$property}: $value;
+}
+
+@mixin border-radius($radius) {
+  @include prefixed-property(border-radius, $radius);
+}
+
+@mixin inline-block($alignment: middle) {
+  display: -moz-inline-stack;
+  display: inline-block;
+  @if $alignment and $alignment != none {
+    vertical-align: $alignment;
+  }
+}
+
+
+@mixin basic-icon($font-size: null) {
+  font-family: Agric;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  width: auto;
+  height: auto;
+  background-image: none;
+  background-position: 0% 0%;
+  background-repeat: repeat;
+  margin-top: 0;
+  @if $font-size != null {
+    font-size: $font-size;
+  }
+}
+
+@mixin is-icon($font-size: round(1.2 * $fs-normal)) {
+  @include basic-icon($font-size);
+  vertical-align: middle;
+}
+
+@mixin use-icon($name) {
+  &::before { content: icon-character($name); }
+}
+
+
+@mixin define-right-property($base-name, $value) {
+  html & { #{$base-name}-right: $value; }
+  html[dir="ltr"] & { #{$base-name}-right: $value; }
+  html[dir="rtl"] & { #{$base-name}-left: $value; }
+}
+
+@mixin define-left-property($base-name, $value) {
+  html & { #{$base-name}-left: $value; }
+  html[dir="ltr"] & { #{$base-name}-left: $value; }
+  html[dir="rtl"] & { #{$base-name}-right: $value; }
+}
+
+@mixin margin-right($value) { @include define-right-property(margin, $value); }
+@mixin margin-left($value)  { @include define-left-property(margin, $value); }
+
+@mixin text-align($dir) {
+  @if $dir == right {
+    html & { text-align: right; }
+    html[dir="ltr"] & { text-align: right; }
+    html[dir="rtl"] & { text-align: left; }
+  } @else if $dir == left {
+    html & { text-align: left; }
+    html[dir="ltr"] & { text-align: left; }
+    html[dir="rtl"] & { text-align: right; }
+  } @else {
+    html &, html[dir="ltr"] &, html[dir="rtl"] & { text-align: $dir; }
+  }
+}
+
+@mixin float($dir) {
+  @if $dir == right {
+    html & { float: right; }
+    html[dir="ltr"] & { float: right; }
+    html[dir="rtl"] & { float: left; }
+  } @else if $dir == left {
+    html & { float: left; }
+    html[dir="ltr"] & { float: left; }
+    html[dir="rtl"] & { float: right; }
+  } @else {
+    html & html[dir="ltr"] &, html[dir="rtl"] & { float: $dir; }
+  }
+}
+
+@mixin menu-box {
+  background: $menu-background;
+  @include menu-shadow;
+  border: $menu-border;
+}
+
+@mixin menu-shadow {
+  @include box-shadow(0 0 ($fs-normal/4) rgba(0, 0, 0, 0.3));
+}
+
+@mixin menu {
+  @include menu-box;
+  &, li a {
+    font-weight: normal;
+    color: $text-color;
+  }
+}
+
+@mixin legend-label {
+  &, * {
+    color: $neutral-color;
+    text-transform: uppercase;
+    font-size: $fs-small;
+    line-height: $lh-small;
+    font-weight: bold;
+  }
+}
+

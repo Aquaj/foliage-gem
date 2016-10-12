@@ -1,0 +1,47 @@
+// Basic colors
+$white: #FFFFFF !default;
+$black: #000000 !default;
+
+// Font sizes
+$fs-ratio:   1.2 !default;
+$fs-small:     11px !default;
+$fs-normal:    13px !default;
+
+// Line heights
+$lh-ratio: 1.61803398875 !default;
+$lh-small:     round($lh-ratio * $fs-small);
+$lh-normal:    round($lh-ratio * $fs-normal);
+
+// Colors
+$base-color:         #688ED8 !default;
+$highlight-color:    #FFEE80 !default;
+$neutral-color:      mix($black, $white, 45%) !default;
+$active-color:       $base-color !default;
+$active-link-color:  darken($base-color, 10%) !default;
+$title-color:        darken($base-color, 40%) !default;
+$text-color:        darken($base-color, 40%) !default;
+$base-font-reversed-color: $white !default;
+
+$hover-transparency: 0.92 !default;
+$hover-mask: transparentize($neutral-color, $hover-transparency);
+
+$neutral-background: change-color($neutral-color, $lightness: 94%) !default;
+
+// Menu colors
+$menu-background: mix($neutral-background, $white, 55%) !default;
+$menu-border-color: mix($menu-background, $black, 90%);
+$menu-border-width: floor($fs-normal / 10);
+$menu-border: $menu-border-width solid $menu-border-color;
+
+
+$default-border-radius: round($fs-normal * 0.2);
+$default-gap: round($fs-normal * 0.55);
+
+// Map
+$map-button-size: round(2 * $fs-normal);
+
+// Font families
+$sans-font-family:   'Open Sans', 'Droid Sans', 'Liberation Sans', Helvetica, sans-serif !default;
+$base-font-family:   $sans-font-family !default;
+
+@import "bootstrap/variables"

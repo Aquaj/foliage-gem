@@ -1,0 +1,10 @@
+// Copyright (c) 2011-2016 Twitter, Inc
+// Copyright (c) 2011-2016 The Bootstrap Authors
+// MIT License
+//
+//  Lifted from Botstrap Sass's GitHub :
+// http://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_variables.scss
+
+// Popover bg colors - Line 544 & 553
+$popover-bg:                          #fff !default;
+$popover-title-bg: darken($popover-bg, 3%) !default;

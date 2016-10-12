@@ -1,0 +1,5 @@
+pkg
+**/*~
+Gemfile.lock
+*.gem
+test/dummy/Gemfile.lock

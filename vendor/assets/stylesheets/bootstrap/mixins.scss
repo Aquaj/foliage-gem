@@ -1,0 +1,55 @@
+// Copyright (c) 2011-2016 Twitter, Inc
+// Copyright (c) 2011-2016 The Bootstrap Authors
+// MIT License
+//
+//  Lifted from Botstrap Sass's GitHub :
+// http://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/mixins/
+
+
+//// _vendor-prefixes.scss
+
+// Box Shadow - Line 68 to 71
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow; // iOS <4.3 & Android <4.1
+          box-shadow: $shadow;
+}
+
+// Box-Sizing - Line 73 to 78
+@mixin box-sizing($boxmodel) {
+  -webkit-box-sizing: $boxmodel;
+     -moz-box-sizing: $boxmodel;
+          box-sizing: $boxmodel;
+}
+
+// Transition - Line 185 to 189
+@mixin transition($transition...) {
+  -webkit-transition: $transition;
+       -o-transition: $transition;
+          transition: $transition;
+}
+
+// User Select - Line 217 to 222
+@mixin user-select($select) {
+  -webkit-user-select: $select;
+     -moz-user-select: $select;
+      -ms-user-select: $select; // IE10+
+          user-select: $select;
+}
+
+// Rotate - Line 147 to 152
+@mixin rotate($degrees) {
+  -webkit-transform: rotate($degrees);
+      -ms-transform: rotate($degrees); // IE9 only
+       -o-transform: rotate($degrees);
+          transform: rotate($degrees);
+}
+
+//// _opacity.scss
+
+// Opacity - Line 1 to 8
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  // IE8 filter
+  $opacity-ie: ($opacity * 100);
+  filter: alpha(opacity=$opacity-ie);
+}

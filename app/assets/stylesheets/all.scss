@@ -1,0 +1,16 @@
+/*
+ * This is a manifest file that'll be compiled into screen.css, which will include all the files
+ * listed below.
+ *
+ *= require_self
+ */
+
+// Core variables and mixins
+@import "variables";
+@import "mixins";
+
+// Reset
+@import "reset";
+
+// Leaflet
+@import "leaflet";
