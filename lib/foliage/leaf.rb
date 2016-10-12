@@ -14,7 +14,7 @@ module Foliage
           referenceName: 'open_street_map.hot',
           attribution: '&copy; <a href=\'http://openstreetmap.org\'>OpenStreetMap</a> contributors, <a href=\'http://creativecommons.org/licenses/by-sa/2.0/\'>CC-BY-SA</a>, Tiles courtesy of <a href=\'http://hot.openstreetmap.org/\' target=\'_blank\'>Humanitarian OpenStreetMap Team</a>',
           tms: false,
-          byDefault: false
+          byDefault: true
         },
         {
           name: 'Thunderforest Landscape',
@@ -35,7 +35,7 @@ module Foliage
           minZoom: 3,
           maxZoom: 15,
           tms: false,
-          byDefault: true
+          byDefault: false
         },
         {
           name: 'Esri World imagery',
