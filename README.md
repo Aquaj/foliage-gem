@@ -9,6 +9,9 @@ Based on [Leaflet.js](http://leafletjs.com).
 Foliage onlt handles Ruby versions posterior to Ruby 1.9.3
 
 >gem install rails, -v '>= 3.2'
+
 >gem install jquery-rails -v '~> 4.0'
+
 >gem install coffee-rails -v '~> 4.1'
+
 >gem install sass-rails -v '~> 5.0'
