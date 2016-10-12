@@ -6,7 +6,7 @@ Based on [Leaflet.js](http://leafletjs.com).
 
 ## Dependencies
 
-Foliage onlt handles Ruby versions posterior to Ruby 1.9.3
+Foliage only handles Ruby versions posterior to Ruby 2.0
 
 >gem install rails, -v '>= 3.2'
 
