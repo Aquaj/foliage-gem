@@ -15,7 +15,7 @@ Gem::Specification.new do |spec|
 
   spec.files         = `git ls-files -z app vendor LICENSE.txt README.md lib`.split("\x0")
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
-  spec.require_paths = [File.join('app', 'helpers')]
+  spec.require_path  = 'lib'
   spec.required_ruby_version = '>= 2.0.0'
 
   spec.add_dependency 'rails', ['>= 3.2']
