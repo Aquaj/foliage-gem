@@ -1,7 +1,8 @@
 # Add sprockets directives below:
 
 #= require jquery
-#= require jquery-ui
+#= require jquery-ui/core
+#= require jquery-ui/widget
 #= require jquery_ujs
 #= require turbolinks
 #= require_self

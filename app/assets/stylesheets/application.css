@@ -11,5 +11,7 @@
  * file per style scope.
  *
  *= require all
+ *= require jquery-ui/core
+ *= require jquery-ui/theme
  *= require_self
  */
